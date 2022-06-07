@@ -1,0 +1,93 @@
+header {
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #aaa;
+
+	.inner {
+		width: 1180px;
+		height: 80px;
+		margin: 0px auto;
+		position: relative;
+
+		h1 {
+			position: absolute;
+			bottom: 20px;
+			left: 0px;
+
+			a {
+				font-size: $fontL;
+				font-family: 'arial';
+				color: #333;
+			}
+		}
+
+		#gnb {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+
+			li {
+				float: left;
+
+				a {
+					display: inline-block;
+					padding: 20px 30px;
+					font-size: $fontM;
+					font-family: 'arial';
+					color: #555;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.fa-bars {
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+			font-size: $fontXL;
+			color: #555;
+			display: none;
+		}
+	}
+
+	&.main {
+		background: transparent;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 2;
+
+		.inner {
+			h1 a {
+				color: #fff;
+			}
+
+			#gnb li a {
+				color: #eee;
+			}
+
+			.fa-bars {
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	header {
+		.inner {
+			width: 100%;
+
+			h1 {
+				left: 30px;
+			}
+
+			#gnb {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
+	}
+}

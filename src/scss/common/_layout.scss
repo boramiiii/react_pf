@@ -1,0 +1,75 @@
+.content {
+	figure {
+		height: 250px;
+		background: gray;
+		opacity: 0;
+		transition: 1s;
+	}
+
+	> .inner {
+		width: 1180px;
+		min-height: 800px;
+		margin: 100px auto;
+		position: relative;
+		opacity: 0;
+		transform: translateY(100px);
+		transition: 1s;
+
+		h2 {
+			font-weight: normal;
+			font-size: $fontXXXL;
+			font-family: 'work sans';
+			color: #333;
+			margin-bottom: 100px;
+			opacity: 0;
+			transition: 0.5s 1s;
+			transform: translateX(-100px);
+
+			&::after {
+				content: '';
+				display: block;
+				width: 60px;
+				height: 1px;
+				background: #555;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&.on {
+		figure {
+			opacity: 1;
+		}
+
+		> .inner {
+			transform: translateY(0px);
+			opacity: 1;
+
+			h2 {
+				transform: translateX(0px);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.content {
+		figure {
+			height: 180px;
+		}
+		> .inner {
+			width: 100%;
+			margin: 80px auto;
+			padding: 0px 30px;
+		}
+	}
+}
+
+@media screen and (max-width: $mp) {
+	.content {
+		figure {
+			height: 130px;
+		}
+	}
+}
