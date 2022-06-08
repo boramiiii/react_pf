@@ -68,6 +68,8 @@ function Location() {
 		position: markerPosition,
 		image: markerImage,
 	});
+
+
 	//최종 마커 호출
 
 	useEffect(() => {
@@ -77,10 +79,19 @@ function Location() {
 			container.current,
 			option
 		);
+		const handleResize = () => {
+			map_instance.setCenter(Info[Index].latlng);
+		}
 		//마커 출력
 		marker.setMap(map_instance);
 		//인스턴스값을 state에 담아서 관리
 		setLocation(map_instance);
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		}
 
 		//버튼활성화
 		// for (const btn of btns.current.children) btn.classList.remove("on");
