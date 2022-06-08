@@ -1,5 +1,5 @@
 {
-  "homepage": "https://boramiiii.github.io/react_pf/",
+  "homepage": "https://boramiiii.github.io/react_pf",
   "name": "test",
   "version": "0.1.0",
   "private": true,
@@ -43,5 +43,5 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  },
+  }
 }
