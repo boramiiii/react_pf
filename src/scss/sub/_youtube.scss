@@ -42,6 +42,7 @@
 			background: #000;
 			filter: saturate(0);
 			transition: 0.5s;
+			cursor: pointer;
 
 			&:hover {
 				filter: saturate(1.2);
@@ -51,6 +52,49 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width:$tablet) {
+	.Youtube {
+		article {
+			
+			h3 {
+				width: 47%;
+			}
+	
+			.txt {
+				width: 50%;
+			}
+	
+			.pic {
+				width: 100%;
+				margin-top:50px;
+				margin-bottom: 80px;
+			}
+		}
+	}
+}
+@media screen and (max-width:$mp) {
+	.Youtube {
+		article {
+			
+			h3 {
+				width: 100%;
+			}
+	
+			.txt {
+				width: 100%;
+				margin-top: 20px;
+			}
+	
+			.pic {
+				margin-top:40px;
+				margin-bottom: 0;
+				height: 120px;
 			}
 		}
 	}
